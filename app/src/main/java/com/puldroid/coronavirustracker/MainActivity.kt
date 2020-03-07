@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         mViewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
         viewPager.adapter = mViewPagerAdapter
+        viewPager.offscreenPageLimit = 3
+        title = "Corona Virus Tracker"
 
         bottomNav.setOnNavigationItemSelectedListener(this)
 

@@ -55,10 +55,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
+                        android:text="Confirmed"
                         android:textColor="#2196F3"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:text="Confirmed" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -71,9 +71,9 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -91,10 +91,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
+                        android:text="Death"
                         android:textColor="#F44336"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:text="Death" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -125,10 +125,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
+                        android:text="Recovered"
                         android:textColor="#4CAF50"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:text="Recovered" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -168,10 +168,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
+                        android:text="Sick"
                         android:textColor="#FF9800"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:text="Sick" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -184,10 +184,10 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -204,16 +204,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
+                        android:text="Recovery Rate"
+                        android:textAlignment="center"
                         android:textColor="#4CAF50"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        android:text="Recovery Rate" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
                 <View
-
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
                     android:background="@color/colorAccent" />
@@ -239,10 +238,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
+                        android:text="Fatality Rate"
                         android:textColor="#F44336"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:text="Fatality Rate" />
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -257,15 +256,33 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:cardCornerRadius="12dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            tools:itemCount="4"
-            android:id="@+id/countryRv"
-            tools:listitem="@layout/item_country"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_country"/>
+
+            <View
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/countryRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_country" />
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 

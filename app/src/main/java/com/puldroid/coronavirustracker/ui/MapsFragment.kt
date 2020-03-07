@@ -73,7 +73,8 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
                         MarkerOptions().position(it1)
                             .title("${it.attributes.countryRegion} C${it.attributes.confirmed} D${it.attributes.deaths} R${it.attributes.recovered} ")
                     })
-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(LatLng(28.0,77.0)))
+                    mMap.uiSettings.isMapToolbarEnabled = false
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(28.0,77.0),4f))
                 }
             }
 

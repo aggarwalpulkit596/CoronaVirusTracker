@@ -14,9 +14,6 @@ import kotlinx.coroutines.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-/**
- * A simple [Fragment] subclass.
- */
 class StatsFragment : Fragment() {
 
     val countryAdapter = CountryAdapter()
@@ -59,10 +56,10 @@ class StatsFragment : Fragment() {
                 recoveredTv.text = recovered.toString()
                 if (regionRes.isSuccessful) {
                     regionRes.body()?.features?.let {
-                        countryAdapter.swapData(it.distinctBy {
-                            it.attributes?.countryRegion
-                        }.sortedByDescending {
+                        countryAdapter.swapData(it.sortedByDescending {
                             it.attributes?.confirmed
+                        }.distinctBy {
+                            it.attributes?.countryRegion
                         })
                     }
                 }
