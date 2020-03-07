@@ -19,6 +19,7 @@
         android:gravity="left|center_vertical"
         android:text="Myth Busters"
         android:textAllCaps="false"
+        android:drawableEnd="@drawable/ic_send"
         android:textSize="18sp"
         app:strokeColor="@color/colorPrimaryDark"
         app:strokeWidth="2dp" />
@@ -33,7 +34,7 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:textAllCaps="false"
         app:strokeWidth="2dp"
-
+        android:drawableEnd="@drawable/ic_send"
         android:text="When and how to use Masks"
         android:gravity="left|center_vertical"
         android:layout_marginEnd="16dp"

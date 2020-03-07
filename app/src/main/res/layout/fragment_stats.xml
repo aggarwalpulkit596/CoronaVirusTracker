@@ -1,290 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/swipeToRefresh"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.StatsFragment">
+    android:orientation="vertical">
 
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="12dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.StatsFragment">
 
-        <LinearLayout
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/updatedTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:text="Updated 10th March" />
+            android:layout_margin="16dp"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/updatedTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Updated 10th March" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_marginTop="8dp">
 
-                    <TextView
-                        android:id="@+id/confirmedTv"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textColor="#2196F3"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        tools:text="102,188" />
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/confirmedTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#2196F3"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            tools:text="102,188" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Confirmed"
+                            android:textColor="#2196F3"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Confirmed"
-                        android:textColor="#2196F3"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/deathTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#F44336"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            tools:text="102,188" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Death"
+                            android:textColor="#F44336"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/recoveredTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#4CAF50"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            tools:text="102,188" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Recovered"
+                            android:textColor="#4CAF50"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
                 <View
 
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
                     android:background="@color/colorAccent" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_marginTop="8dp">
 
-                    <TextView
-                        android:id="@+id/deathTv"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textColor="#F44336"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        tools:text="102,188" />
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/sickTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#FF9800"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            tools:text="102,188" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Sick"
+                            android:textColor="#FF9800"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Death"
-                        android:textColor="#F44336"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/recoveredRateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#4CAF50"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            tools:text="102,188" />
 
-                <View
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="Recovery Rate"
+                            android:textAlignment="center"
+                            android:textColor="#4CAF50"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent" />
 
-                    <TextView
-                        android:id="@+id/recoveredTv"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textColor="#4CAF50"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        tools:text="102,188" />
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Recovered"
-                        android:textColor="#4CAF50"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/fatalRateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textColor="#F44336"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            tools:text="102,188" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Fatality Rate"
+                            android:textColor="#F44336"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
 
             </LinearLayout>
 
-            <View
+        </com.google.android.material.card.MaterialCardView>
 
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/colorAccent" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/sickTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textColor="#FF9800"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        tools:text="102,188" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Sick"
-                        android:textColor="#FF9800"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
+                <include layout="@layout/item_country" />
 
                 <View
-
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/recoveredRateTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textColor="#4CAF50"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        tools:text="102,188" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
-                        android:text="Recovery Rate"
-                        android:textAlignment="center"
-                        android:textColor="#4CAF50"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
                     android:background="@color/colorAccent" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/countryRv"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/fatalRateTv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:textColor="#F44336"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        tools:text="102,188" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Fatality Rate"
-                        android:textColor="#F44336"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_country" />
             </LinearLayout>
 
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="12dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <include layout="@layout/item_country"/>
-
-            <View
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/colorAccent" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/countryRv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:itemCount="4"
-                tools:listitem="@layout/item_country" />
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
 
 
-</LinearLayout>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

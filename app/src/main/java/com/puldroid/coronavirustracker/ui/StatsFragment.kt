@@ -28,11 +28,13 @@ class StatsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        updatedTv.text = "Updated: ${getCurrentDate()}"
         countryRv.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = countryAdapter
 
+        }
+        swipeToRefresh.setOnRefreshListener {
+            fetchResults()
         }
         fetchResults()
     }
@@ -48,6 +50,8 @@ class StatsFragment : Fragment() {
             val fatalityRate: Double = (death.toDouble() / confirmed.toDouble()) * 100
             val regionRes = withContext(Dispatchers.IO) { Client.api.getCases() }
             GlobalScope.launch(Dispatchers.Main) {
+                updatedTv.text = "Updated: ${getCurrentDate()}"
+                swipeToRefresh.isRefreshing = false
                 sickTv.text = sick.toString()
                 recoveredRateTv.text = recoveryRate.toRoundString()
                 fatalRateTv.text = fatalityRate.toRoundString()
