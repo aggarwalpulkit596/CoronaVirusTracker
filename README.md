@@ -1,7 +1,7 @@
 # Corona Virus Tracker & Advices Android App with Kotlin
 Application is available here:
 
-<a href='cb.lk/corona'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="80"/></a>
+<a href='https://cb.lk/corona'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="80"/></a>
 
 ## Screenshots
 <table>
