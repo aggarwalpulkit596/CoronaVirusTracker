@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_stats"
+        android:icon="@drawable/ic_show_chart_black_24dp"
+        android:title="Stats" />
+    <item
+        android:id="@+id/navigation_maps"
+        android:icon="@drawable/ic_map"
+        android:title="Maps" />
+    <item
+        android:id="@+id/navigation_advice"
+        android:icon="@drawable/ic_dock_black_24dp"
+        android:title="Advices" />
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/ic_person"
+        android:title="About" />
+
+
+</menu>
