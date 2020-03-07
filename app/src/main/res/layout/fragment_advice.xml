@@ -1,15 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".ui.AdviceFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cornerRadius="5dp"
+        android:gravity="left|center_vertical"
+        android:text="Myth Busters"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:strokeColor="@color/colorPrimaryDark"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="5dp"
+        android:textSize="18sp"
+        app:strokeColor="@color/colorPrimaryDark"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textAllCaps="false"
+        app:strokeWidth="2dp"
+
+        android:text="When and how to use Masks"
+        android:gravity="left|center_vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/adviceRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:itemCount="5"
         tools:listitem="@layout/item_advice" />
 
-</FrameLayout>
+</LinearLayout>
