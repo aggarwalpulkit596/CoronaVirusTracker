@@ -69,10 +69,11 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
                             )
                         }
                     }
-                    mMap.addMarker(marker?.let { it1 ->
+                    marker?.let { it1 ->
+                        mMap.addMarker(
                         MarkerOptions().position(it1)
-                            .title("${it.attributes.countryRegion} C${it.attributes.confirmed} D${it.attributes.deaths} R${it.attributes.recovered} ")
-                    })
+                            .title("${it.attributes.countryRegion} C${it.attributes.confirmed} D${it.attributes.deaths} R${it.attributes.recovered} "))
+                    }
                     mMap.uiSettings.isMapToolbarEnabled = false
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(28.0,77.0),4f))
                 }

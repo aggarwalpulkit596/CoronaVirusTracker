@@ -29,12 +29,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         title = "Corona Virus Tracker"
 
         bottomNav.setOnNavigationItemSelectedListener(this)
-
-        GlobalScope.launch {
-            val response = withContext(Dispatchers.IO) { Client.api.getCases() }
-            Log.i("Networking", response.body().toString())
-            response.body()
-        }
     }
 
     override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
